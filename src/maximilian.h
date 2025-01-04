@@ -39,6 +39,8 @@
 #include <fstream>
 #include <string.h>
 #include <cstdlib>
+#include <cstdint>
+#include <limits>
 #include "math.h"
 #include <cmath>
 #include <vector>
@@ -2316,6 +2318,7 @@ class CHEERP_EXPORT maxiEnvGen {
                         }
                         if (retrigger) {
                             if (retriggerDetector.onZX(trigger)) {
+                                nxcHappened = false;
                                 reset();
                             }
                         }
@@ -2336,6 +2339,7 @@ class CHEERP_EXPORT maxiEnvGen {
                     }
                     if (retrigger) {
                         if (retriggerDetector.onZX(trigger)) {
+                            nxcHappened = false;
                             reset();
                         }
                     }
